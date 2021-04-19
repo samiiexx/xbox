@@ -1,0 +1,116 @@
+@mixin backImage($gradient, $image) {
+    background-image: linear-gradient($gradient), url($image);
+}
+
+@mixin background($pos: center center) {
+    background-position: $pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flex($layout: space-between) {
+    display: flex;
+    justify-content: $layout;
+    align-items: center;
+}
+
+$media-types: (
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl,
+);
+
+$media-types-retina: (
+    non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)",
+    retina: "screen and (-webkit-min-device-pixel-ratio: 2)",
+);
+
+@mixin media-max($size) {
+    @if map-has-key($media-types, $size) {
+        @media only screen and (max-width: #{map-get($media-types, $size)}) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: #{$size}) {
+            @content;
+        }
+    }
+}
+
+@mixin media-min($size) {
+    @if map-has-key($media-types, $size) {
+        @media only screen and (min-width: #{map-get($media-types, $size)}) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: #{$size}) {
+            @content;
+        }
+    }
+}
+
+@mixin media-retina($size) {
+    @if not map-has-key($media-types-retina, $size) {
+        @warn "#{$size} is not a known media type. Using retina instead.";
+        $size: retina;
+    }
+    @media only #{map-get($media-types-retina, $size)} {
+        @content;
+    }
+}
+
+@mixin btn($border: 2px, $radius: 10px) {
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+    outline: none;
+    border-width: $border;
+    border-style: solid;
+    border-radius: $radius;
+    &:focus,
+    &:hover {
+        transition: all $normal;
+    }
+    &:active {
+        transition: all $normal;
+    }
+}
+
+@mixin btn-outline($color, $color-alt) {
+    @include btn();
+    color: $color;
+    border-color: $color;
+    background-color: transparent;
+    &:focus,
+    &:hover {
+        color: $color-alt;
+        background-color: $color;
+        border-color: $color;
+    }
+    &:active {
+        color: $color-alt;
+        background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+    }
+}
+
+@mixin btn-solid($color, $color-alt) {
+    @include btn();
+    color: $color-alt;
+    border-color: $color;
+    background-color: $color;
+    &:focus,
+    &:hover {
+        color: $color-alt;
+        background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+    }
+    &:active {
+        color: $color-alt;
+        background-color: darken($color, 20%);
+        border-color: darken($color, 20%);
+    }
+}

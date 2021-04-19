@@ -1,0 +1,54 @@
+/*=============================================
+=            Theme            =
+=============================================*/
+
+/* Colors */
+$primary: rgb(250, 174, 123);
+$secondary: rgb(204, 139, 121);
+$success: #06af52;
+$danger: #ff6347;
+$warning: #ffc107;
+$light: #f8f9fa;
+$dark: #060606;
+$grey: #565655;
+$white: #ffffff;
+
+/* Typography */
+$font-family: "Josefin Sans", sans-serif;
+$font-normal: 400;
+$font-bold: 700;
+
+/*=====  End of Theme  ======*/
+
+/*=============================================
+=            Misc Config            =
+=============================================*/
+
+/* Breakpoints */
+$xs: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+/* Transitions */
+
+$fast: 0.2s ease-out;
+$normal: 0.4s ease-out;
+$slow: 0.6s ease-out;
+
+/*=====  End of Misc Config  ======*/
+
+/*=============================================
+=            Gradients            =
+=============================================*/
+$gradient-0: rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7);
+$gradient-1: rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3);
+$gradient-2: linear-gradient(
+    to right,
+    rgba($secondary, 0.85),
+    rgba($primary, 0.85)
+);
+$gradient-3: rgba($secondary, 0.5), rgba($primary, 0.5);
+/*=====  End of Gradients  ======*/

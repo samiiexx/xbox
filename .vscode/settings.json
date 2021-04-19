@@ -1,0 +1,39 @@
+{
+    // Default StarBox Tech Project Settings
+    "liveServer.settings.port": 5501,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "files.trimFinalNewlines": true,
+    "editor.tabCompletion": "on",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "cSpell.ignoreWords": ["Osita", "Ugwueze"],
+    "cSpell.language": "en-GB",
+    "cSpell.words": [
+        "mixins",
+        "bg",
+        "starbox",
+        "starboxtech",
+        "unstyled",
+        "sbx"
+    ]
+}

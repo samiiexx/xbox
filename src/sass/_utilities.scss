@@ -1,0 +1,199 @@
+/*=============================================
+=            Containers            =
+=============================================*/
+
+.container {
+    margin: 0 auto;
+    max-width: $xl;
+    padding: 0 1rem;
+}
+
+.container-lg {
+    @extend .container;
+    max-width: $lg;
+}
+
+.container-md {
+    @extend .container;
+    max-width: $md;
+}
+
+.container-sm {
+    @extend .container;
+    max-width: $sm;
+}
+
+.contained-text {
+    display: block;
+    max-width: 450px;
+}
+
+/*=====  End of Containers  ======*/
+
+/*=============================================
+=            Spacing            =
+=============================================*/
+
+// Uses Bootstrap!
+// Sets padding and margin spacing utilities for 1
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+);
+@for $i from 1 through 5 {
+    $spacers: map-merge(
+        $spacers,
+        (
+            $i: (
+                $i * $spacer,
+            ),
+        )
+    );
+}
+/*=====  End of Spacing  ======*/
+
+/*=============================================
+=            Typography            =
+=============================================*/
+
+.h1 {
+    font-size: 3rem;
+    font-weight: $font-bold;
+    margin-top: 0;
+    @include media-max("md") {
+        font-size: 2.2rem;
+    }
+}
+
+.h2 {
+    font-size: 2rem;
+    font-weight: $font-bold;
+}
+
+.h3 {
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+}
+
+.h4 {
+    font-size: 1.15rem;
+    font-weight: $font-bold;
+}
+
+.title {
+    // text-align: center;
+    padding-bottom: 1rem;
+    // @include media-max("md") {
+    //     text-align: center;
+    // }
+}
+
+.sub-title {
+    padding-bottom: 1rem;
+
+    // @include media-max("md") {
+    //     display: block;
+    //     text-align: center;
+    //     margin: 2rem 0;
+    // }
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*=====  End of Typography  ======*/
+
+/*=============================================
+=            Buttons            =
+=============================================*/
+.btn-primary,
+.btn-primary-outline {
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    line-height: initial;
+}
+
+.btn-primary {
+    @include btn-solid($primary, $white);
+}
+
+.btn-primary-outline {
+    @include btn-outline($primary, $white);
+}
+
+.btn-secondary {
+    @include btn-solid($secondary, $white);
+}
+
+.btn-secondary-outline {
+    @include btn-outline($secondary, $white);
+}
+
+.btn-dark {
+    @include btn-solid($dark, $white);
+}
+
+.btn-dark-outline {
+    @include btn-outline($dark, $white);
+}
+
+.btn-success {
+    @include btn-solid($success, $white);
+}
+
+.btn-success-outline {
+    @include btn-outline($success, $white);
+}
+
+.btn-warning {
+    @include btn-solid($warning, $white);
+}
+
+.btn-warning-outline {
+    @include btn-outline($warning, $white);
+}
+
+.btn-danger {
+    @include btn-solid($danger, $white);
+}
+
+.btn-danger-outline {
+    @include btn-outline($danger, $white);
+}
+
+/*=====  End of Buttons  ======*/
+
+/*=============================================
+=            Responsive            =
+=============================================*/
+
+%img-fluid,
+.img-fluid {
+    // width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=====  End of Responsive  ======*/
+
+/*=============================================
+=            Misc            =
+=============================================*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.fas,
+.fab,
+.fa {
+    color: $secondary;
+}
+
+/*=====  End of Misc  ======*/
