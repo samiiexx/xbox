@@ -20,3 +20,186 @@ a {
         font-size: 1.5rem;
     }
 }
+
+.container {
+    max-width: $xxl;
+}
+
+.header {
+    @include flex;
+}
+
+.logo {
+    flex-basis: 60%;
+}
+
+.series-s {
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+}
+
+.h1-title {
+    font-size: 5rem;
+    color: $primary;
+    text-transform: uppercase;
+    margin: 3rem 0;
+}
+
+.header-icon {
+    font-size: 2rem;
+}
+
+.flex-group {
+    @include flex;
+}
+
+.subtitle {
+    font-size: 3rem;
+    // margin: 3rem 0;
+}
+
+.desc-group {
+    // transform: translateY(-60%);
+}
+
+.lists {
+    @include flex;
+    & > * {
+        padding-right: 10px;
+    }
+}
+
+.list-item {
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.big-text {
+    font-size: 1.5rem;
+}
+
+.small-text {
+    font-size: 0.5rem;
+    text-transform: capitalize;
+}
+
+.orange {
+    color: $orange;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.blue {
+    color: $blue;
+}
+
+.price {
+    font-weight: $font-bold;
+    font-size: 4rem;
+}
+
+.price-s {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+}
+
+.content {
+    position: absolute;
+    top: 15%;
+}
+
+.content {
+    position: absolute;
+    top: 15%;
+}
+
+.series-s-grp {
+    position: absolute;
+    top: 35%;
+}
+.xbox {
+    @extend %img-fluid;
+    transform: rotate(0deg) translate(6%, -15%);
+}
+
+.xbox-x {
+    width: 1400px;
+    opacity: 1;
+}
+
+.xbox-s {
+    width: 1300px;
+    position: absolute;
+    left: 320px;
+    opacity: 0;
+}
+
+.letter {
+    position: absolute;
+    color: $white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: $font-bold;
+    padding: 0.1rem;
+    width: 25px;
+    height: 25px;
+}
+
+.a {
+    background-color: $orange;
+    top: 15%;
+    right: 550px;
+}
+
+.b {
+    background-color: $yellow;
+    top: 15%;
+    left: 700px;
+    transform: rotate(-40deg);
+}
+
+.x {
+    background-color: $blue;
+    bottom: 10%;
+    left: 1000px;
+    transform: rotate(-50deg);
+}
+
+.console {
+    @extend %img-fluid;
+    width: 150px;
+}
+
+// .console-x {
+//     opacity: 0;
+// }
+
+.series-grp {
+    position: absolute;
+    right: 250px;
+}
+
+.console-s {
+    opacity: 1;
+    right: 10px;
+    top: 10px;
+}
+
+.console-x {
+    position: absolute;
+    top: -700px;
+    opacity: 0;
+}
+
+.series-text {
+    font-size: 1.2rem;
+    font-weight: $font-bold;
+    color: $primary;
+    margin-left: 3rem;
+    padding: 0.5rem 0;
+}

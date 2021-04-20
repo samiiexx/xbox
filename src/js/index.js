@@ -1,10 +1,10 @@
 // Navigation Menu Toggler
-var header = document.querySelector(".js-header");
-var hamburgerMenu = document.querySelector(".hamburger-menu");
+// var header = document.querySelector(".js-header");
+// var hamburgerMenu = document.querySelector(".hamburger-menu");
 
-hamburgerMenu.addEventListener("click", function () {
-    header.classList.toggle("menu-open");
-});
+// hamburgerMenu.addEventListener("click", function () {
+//     header.classList.toggle("menu-open");
+// });
 
 // JQuery Scripts
 $(document).ready(function () {
@@ -182,4 +182,79 @@ $(document).ready(function () {
         },
         "Invalid phone number"
     );
+
+    //GSAP Animations
+    $(".series-s-grp").on("click", function () {
+        var tl = gsap.timeline();
+        tl.to(".img-xbox", 1, {
+            rotation: "360deg",
+            x: "6%",
+            y: "-15%",
+            opacity: 0,
+        })
+            .to(".xbox-s", 2, {
+                opacity: 1,
+                delay: -2,
+            })
+            .to(".series-x", 0.3, {
+                opacity: 0,
+            })
+            .to(".series-s", 0.5, {
+                y: -40,
+                opacity: 1,
+            })
+            .to(".price-x", 0.3, {
+                opacity: 0,
+            })
+            .to(".price-s", 0.5, {
+                y: -29,
+                opacity: 1,
+            })
+            .to(".console-s", 1.5, {
+                x: -400,
+                delay: -3,
+                opacity: 0,
+            })
+            .to(".console-x", 2, {
+                opacity: 1,
+                delay: -3,
+            });
+    });
+
+    $(".series-x-grp").on("click", function () {
+        var tl2 = gsap.timeline();
+        tl2.to(".xbox-x", 2, {
+            opacity: 1,
+            delay: -3,
+        })
+            .to(".xbox-s", 1, {
+                rotation: "360deg",
+                opacity: 0,
+            })
+            .to(".series-s", 0.3, {
+                opacity: 0,
+            })
+            .to(".series-x", 1, {
+                opacity: 1,
+                y: 10,
+            })
+            .to(".price-s", 0.3, {
+                opacity: 0,
+                delay: -2,
+            })
+            .to(".price-x", 1, {
+                opacity: 1,
+                y: 10,
+                delay: -2,
+            })
+            .to(".console-s", 1.5, {
+                x: 0,
+                opacity: 1,
+                delay: -2,
+            })
+            .to(".console-x", 2, {
+                opacity: 0,
+                delay: -2,
+            });
+    });
 });
