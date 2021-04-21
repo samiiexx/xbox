@@ -26,7 +26,8 @@ a {
 }
 
 .header {
-    @include flex;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -52,15 +53,28 @@ a {
 
 .flex-group {
     @include flex;
+    @include media-max("md") {
+        display: block;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 15%;
+    @include media-max("md") {
+        top: 15%;
+        left: 10%;
+    }
 }
 
 .subtitle {
     font-size: 3rem;
-    // margin: 3rem 0;
 }
 
 .desc-group {
-    // transform: translateY(-60%);
+    @include media-max("md") {
+        transform: translateY(90%);
+    }
 }
 
 .lists {
@@ -108,16 +122,6 @@ a {
     opacity: 0;
 }
 
-.content {
-    position: absolute;
-    top: 15%;
-}
-
-.content {
-    position: absolute;
-    top: 15%;
-}
-
 .series-s-grp {
     position: absolute;
     top: 35%;
@@ -125,11 +129,18 @@ a {
 .xbox {
     @extend %img-fluid;
     transform: rotate(0deg) translate(6%, -15%);
+    @include media-max("md") {
+        transform: translate(0%, 70%);
+    }
 }
 
 .xbox-x {
     width: 1400px;
     opacity: 1;
+    //  @include media-max("md") {
+    //     display: none;
+    //     transform: translate(-65%, -40%);
+    // }
 }
 
 .xbox-s {
@@ -137,6 +148,10 @@ a {
     position: absolute;
     left: 320px;
     opacity: 0;
+    @include media-max("md") {
+        display: none;
+        transform: translate(-65%, -40%);
+    }
 }
 
 .letter {
@@ -148,6 +163,9 @@ a {
     padding: 0.1rem;
     width: 25px;
     height: 25px;
+    @include media-max("md") {
+        display: none;
+    }
 }
 
 .a {
@@ -175,13 +193,12 @@ a {
     width: 150px;
 }
 
-// .console-x {
-//     opacity: 0;
-// }
-
 .series-grp {
     position: absolute;
     right: 250px;
+    @include media-max("md") {
+        display: none;
+    }
 }
 
 .console-s {
