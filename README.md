@@ -1,5 +1,5 @@
 # X Box
-Include Description
+This is a sample landing page for XBox
 
 ![X Box](screenshot.jpg)
 
