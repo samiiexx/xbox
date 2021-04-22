@@ -186,153 +186,106 @@ $(document).ready(function () {
     //GSAP Animations
     $(".series-s-grp").on("click", function () {
         var tl = gsap.timeline();
-        tl.to(".img-xbox", 1, {
-            rotation: "360deg",
-            x: "6%",
-            y: "-15%",
+        tl.to(".tri-green", 2, {
+            rotation: "45deg",
             opacity: 0,
         })
-            .to(".xbox-s", 2, {
+            .to(".tri-dark", 2, {
                 opacity: 1,
+                delay: -1,
+            })
+            .to(".console-s", 2, {
+                x: -720,
+                y: 110,
+                opacity: 1,
+                scale: 4.5,
+                delay: -2,
+            })
+            .to(".console-x", 2, {
+                x: 700,
+                y: -110,
+                scale: 1.8,
                 delay: -2,
             })
             .to(".series-x", 0.3, {
                 opacity: 0,
+                delay: -1,
             })
             .to(".series-s", 0.5, {
                 y: -40,
                 opacity: 1,
+                delay: -1,
             })
             .to(".price-x", 0.3, {
                 opacity: 0,
+                delay: -1,
             })
             .to(".price-s", 0.5, {
                 y: -29,
                 opacity: 1,
+                delay: -1,
             })
-            .to(".console-s", 1.5, {
-                x: -400,
-                delay: -3,
+            .to(".series-x-text", 1, {
+                opacity: 1,
+                delay: -1,
+            })
+            .to(".series-s-text", 0.5, {
                 opacity: 0,
-            })
-            .to(".console-x", 2, {
-                opacity: 1,
-                delay: -3,
-            });
-    });
-
-    $(".xbox-link-x").on("click", function () {
-        var tl = gsap.timeline();
-        tl.to(".img-xbox", 1, {
-            rotation: "360deg",
-            x: "6%",
-            y: "-15%",
-            opacity: 0,
-        })
-            .to(".xbox-s", 2, {
-                y: "60%",
-                x: "-20%",
-                opacity: 1,
-                display: "block",
-                delay: -2,
-            })
-            .to(".series-x", 0.3, {
-                opacity: 0,
-            })
-            .to(".series-s", 0.5, {
-                y: -40,
-                opacity: 1,
-            })
-            .to(".price-x", 0.3, {
-                opacity: 0,
-            })
-            .to(".price-s", 0.5, {
-                y: -29,
-                opacity: 1,
-            })
-            .to(".console-s", 1.5, {
-                x: -400,
-                delay: -3,
-                opacity: 0,
-            })
-            .to(".console-x", 2, {
-                opacity: 1,
-                delay: -3,
+                delay: -1,
             });
     });
 
     $(".series-x-grp").on("click", function () {
-        var tl2 = gsap.timeline();
-        tl2.to(".xbox-x", 2, {
-            opacity: 1,
-            delay: -3,
+        var tl = gsap.timeline();
+        tl.to(".tri-dark", 1, {
+            rotation: "-45deg",
+            opacity: 0,
         })
-            .to(".xbox-s", 1, {
-                rotation: "360deg",
-                opacity: 0,
-            })
-            .to(".series-s", 0.3, {
-                opacity: 0,
-            })
-            .to(".series-x", 1, {
+            .to(".tri-green", 2, {
                 opacity: 1,
-                y: 10,
+                y: 160,
+                x: 50,
+                delay: -3,
             })
-            .to(".price-s", 0.3, {
-                opacity: 0,
-                delay: -2,
-            })
-            .to(".price-x", 1, {
-                opacity: 1,
-                y: 10,
-                delay: -2,
-            })
-            .to(".console-s", 1.5, {
+            .to(".console-s", 2, {
                 x: 0,
+                y: 10,
+                scale: 1.3,
                 opacity: 1,
                 delay: -2,
             })
             .to(".console-x", 2, {
-                opacity: 0,
-                delay: -2,
-            });
-    });
-
-    $(".xbox-link-s").on("click", function () {
-        var tl2 = gsap.timeline();
-        tl2.to(".xbox-x", 2, {
-            opacity: 1,
-            y: 200,
-            delay: -3,
-        })
-            .to(".xbox-s", 1, {
-                rotation: "360deg",
-                opacity: 0,
-            })
-            .to(".series-s", 0.3, {
-                opacity: 0,
-            })
-            .to(".series-x", 1, {
                 opacity: 1,
-                y: 10,
+                scale: 6,
+                x: 10,
+                y: 0,
+                delay: -2,
             })
-            .to(".price-s", 0.3, {
+            .to(".series-x", 0.3, {
                 opacity: 0,
-                delay: -2,
+                delay: -1,
             })
-            .to(".price-x", 1, {
+            .to(".series-s", 0.5, {
+                y: -40,
                 opacity: 1,
-                y: 10,
-                delay: -2,
+                delay: -1,
             })
-            .to(".console-s", 1.5, {
-                x: 0,
-                opacity: 1,
-                delay: -2,
-            })
-            .to(".console-x", 2, {
+            .to(".price-x", 0.3, {
                 opacity: 0,
-                delay: -2,
+                delay: -1,
+            })
+            .to(".price-s", 0.5, {
+                y: -29,
+                opacity: 1,
+                delay: -1,
+            })
+            .to(".series-x-text", 0.5, {
+                opacity: 0,
+                delay: -1,
+            })
+            .to(".series-s-text", 1, {
+                opacity: 1,
+                delay: -1,
             });
     });
 });

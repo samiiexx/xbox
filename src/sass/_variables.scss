@@ -54,4 +54,5 @@ $gradient-2: linear-gradient(
     rgba($primary, 0.85)
 );
 $gradient-3: rgba($secondary, 0.5), rgba($primary, 0.5);
+$gradient-4: linear-gradient($primary, $secondary);
 /*=====  End of Gradients  ======*/
