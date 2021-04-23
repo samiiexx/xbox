@@ -22,7 +22,9 @@ a {
 }
 
 .container {
+    // max-width: calc($xxl - 10vw);
     max-width: $xxl;
+    position: relative;
 }
 
 .header {
@@ -60,11 +62,11 @@ a {
 
 .content {
     position: absolute;
-    top: 15%;
-    @include media-max("md") {
-        top: 15%;
-        left: 10%;
-    }
+    top: 100px;
+    // @include media-max("md") {
+    //     top: 15%;
+    //     left: 10%;
+    // }
 }
 
 .subtitle {
@@ -72,9 +74,9 @@ a {
 }
 
 .desc-group {
-    @include media-max("md") {
-        transform: translateY(90%);
-    }
+    // @include media-max("md") {
+    //     transform: translateY(90);
+    // }
 }
 
 .lists {
@@ -111,6 +113,29 @@ a {
     color: $blue;
 }
 
+//Triangle
+.tri {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    transform: rotate(285deg) scale(6.4);
+    position: absolute;
+}
+
+.tri-green {
+    border-left: 100px solid rgba($primary, 0.4);
+    left: 800px;
+    top: 320px;
+}
+
+.tri-dark {
+    border-left: 100px solid rgba($dark, 0.4);
+    left: 800px;
+    top: 320px;
+    opacity: 0;
+}
+
 .price {
     font-weight: $font-bold;
     font-size: 4rem;
@@ -120,11 +145,6 @@ a {
     position: absolute;
     bottom: 20px;
     opacity: 0;
-}
-
-.series-s-grp {
-    position: absolute;
-    top: 35%;
 }
 
 .letter {
@@ -143,47 +163,60 @@ a {
 
 .a {
     background-color: $orange;
-    top: 15%;
-    right: 550px;
+    position: absolute;
+    top: 150px;
+    right: 350px;
 }
 
 .b {
     background-color: $yellow;
-    top: 15%;
+    position: absolute;
+    top: 150px;
     left: 700px;
     transform: rotate(-40deg);
 }
 
 .x {
     background-color: $blue;
-    bottom: 10%;
-    left: 1000px;
+    position: absolute;
+    top: 750px;
+    left: 850px;
     transform: rotate(-50deg);
 }
 
 .console {
     @extend %img-fluid;
+    width: 100px;
+    height: auto;
 }
 
 .series-grp {
+    // position: absolute;
+    // right: 300px;
+}
+
+.series-s-grp {
     position: absolute;
-    right: 250px;
+    top: 300px;
+    // left: 1000px;
+    right: 0px;
 }
 
 .console-s {
     // opacity: 1;
     position: absolute;
-    right: 0px;
-    top: 10px;
+    // right: 0px;
+    // top: 10px;
     transform: scale(1.5);
+    // transform: scale(1.5);
 }
 
 .console-x {
     position: absolute;
-    top: 310px;
-    right: 700px;
+    top: 400px;
+    left: 610px;
     opacity: 1;
-    transform: scale(6);
+    transform: scale(5);
 }
 
 .series-text {
@@ -193,33 +226,12 @@ a {
 }
 
 .series-s-text {
-    transform: translateY(130px);
+    transform: translateY(120px);
 }
 
 .series-x-text {
-    transform: translateY(300px);
-    opacity: 0;
-}
-
-//Triangle
-.tri {
-    width: 0;
-    height: 0;
-    border-top: 60px solid transparent;
-    border-bottom: 60px solid transparent;
-    transform: rotate(285deg) scale(6.4);
+    transform: translateY(281px);
+    right: 0;
     position: absolute;
-}
-
-.tri-green {
-    border-left: 100px solid rgba($primary, 0.4);
-    left: 55%;
-    top: 40%;
-}
-
-.tri-dark {
-    border-left: 100px solid rgba($dark, 0.4);
-    left: 55%;
-    top: 40%;
     opacity: 0;
 }
