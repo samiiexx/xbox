@@ -22,7 +22,6 @@ a {
 }
 
 .container {
-    // max-width: calc($xxl - 10vw);
     max-width: $xxl;
     position: relative;
 }
@@ -30,75 +29,69 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 5vh;
 }
 
 .logo {
     flex-basis: 60%;
 }
 
-.series-s {
-    position: absolute;
-    top: 100px;
-    opacity: 0;
-}
-
-.h1-title {
-    font-size: 5rem;
-    color: $primary;
-    text-transform: uppercase;
-    margin: 3rem 0;
-}
-
 .header-icon {
     font-size: 2rem;
 }
 
-.flex-group {
-    @include flex;
-    @include media-max("md") {
-        display: block;
-    }
+/*=============================================
+=            Main Styles            =
+=============================================*/
+.main {
+    min-height: 85vh;
 }
 
 .content {
-    position: absolute;
-    top: 100px;
-    // @include media-max("md") {
-    //     top: 15%;
-    //     left: 10%;
-    // }
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
-.subtitle {
+.h1-title {
+    margin-top: -3rem;
     font-size: 3rem;
 }
 
-.desc-group {
-    // @include media-max("md") {
-    //     transform: translateY(90);
-    // }
+.subtitle {
+    font-size: 5rem;
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+}
+
+.s-text {
+    position: absolute;
+    top: 110px;
+    opacity: 0;
 }
 
 .lists {
     @include flex;
     & > * {
-        padding-right: 10px;
+        padding-right: 15px;
     }
 }
 
 .list-item {
-    font-weight: $font-bold;
-    text-transform: uppercase;
-    font-size: 0.8rem;
+    text-transform: capitalize;
 }
 
 .big-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: $font-bold;
+    text-transform: uppercase;
 }
 
 .small-text {
-    font-size: 0.5rem;
-    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: $font-bold;
 }
 
 .orange {
@@ -113,37 +106,18 @@ a {
     color: $blue;
 }
 
-//Triangle
-.tri {
-    width: 0;
-    height: 0;
-    border-top: 60px solid transparent;
-    border-bottom: 60px solid transparent;
-    transform: rotate(285deg) scale(6.4);
-    position: absolute;
-}
-
-.tri-green {
-    border-left: 100px solid rgba($primary, 0.4);
-    left: 800px;
-    top: 320px;
-}
-
-.tri-dark {
-    border-left: 100px solid rgba($dark, 0.4);
-    left: 800px;
-    top: 320px;
-    opacity: 0;
-}
-
 .price {
     font-weight: $font-bold;
     font-size: 4rem;
 }
 
+.price-x {
+    opacity: 1;
+}
+
 .price-s {
     position: absolute;
-    bottom: 20px;
+    bottom: 210px;
     opacity: 0;
 }
 
@@ -162,76 +136,63 @@ a {
 }
 
 .a {
-    background-color: $orange;
     position: absolute;
+    background-color: $orange;
     top: 150px;
-    right: 350px;
+    right: 250px;
 }
 
 .b {
-    background-color: $yellow;
     position: absolute;
-    top: 150px;
+    background-color: $yellow;
+    top: 100px;
     left: 700px;
     transform: rotate(-40deg);
 }
 
 .x {
-    background-color: $blue;
     position: absolute;
-    top: 750px;
-    left: 850px;
+    background-color: $blue;
+    bottom: -90px;
+    left: 750px;
     transform: rotate(-50deg);
 }
 
-.console {
-    @extend %img-fluid;
-    width: 100px;
-    height: auto;
-}
-
-.series-grp {
-    // position: absolute;
-    // right: 300px;
-}
-
-.series-s-grp {
-    position: absolute;
-    top: 300px;
-    // left: 1000px;
-    right: 0px;
-}
-
 .console-s {
-    // opacity: 1;
     position: absolute;
-    // right: 0px;
-    // top: 10px;
-    transform: scale(1.5);
-    // transform: scale(1.5);
+    top: 200px;
+    right: -20px;
+    transform: scale(0.7);
 }
 
 .console-x {
     position: absolute;
-    top: 400px;
-    left: 610px;
-    opacity: 1;
-    transform: scale(5);
+    top: 130px;
+    left: 250px;
+    transform: scale(0.7);
 }
 
-.series-text {
-    font-weight: $font-bold;
-    color: $primary;
-    text-transform: uppercase;
-}
-
-.series-s-text {
-    transform: translateY(120px);
-}
-
-.series-x-text {
-    transform: translateY(281px);
-    right: 0;
+//Triangle
+.triangle {
+    // @Favour Study this clamp function.
+    // The middle value is relative to the vw and requires some maths...
+    // to know what function goes in calc that does what you want.
+    width: clamp(300px, calc(100vw / 1.25), 900px);
+    height: auto;
     position: absolute;
-    opacity: 0;
+    top: -10%;
+    left: 25%;
+    transform: scale(0.9);
+
+    // Using CSS Variables to define gradient colors
+    .tri-green {
+        --color-start: #8bd80a;
+        --color-stop: #3d3c3c;
+    }
+
+    .tri-gray {
+        --color-start: #c4c4c4;
+        --color-stop: #3d3c3c;
+    }
 }
+/*=====  End of Main Styles  ======*/

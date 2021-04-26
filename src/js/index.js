@@ -186,58 +186,46 @@ $(document).ready(function () {
     //GSAP Animations
     $(".series-s-grp").on("click", function () {
         var tl = gsap.timeline();
-        tl.to(".tri-green", 2, {
+        tl.to(".triangle .tri-green", 2, {
             rotation: "45deg",
-            opacity: 0,
         })
-            .to(".tri-dark", 2, {
-                opacity: 1,
-                delay: -1,
-            })
+            // .to(".triangle .tri-gray", 2, {
+            //     opacity: 1,
+            //     delay: -1,
+            // })
             .to(".console-s", 2, {
                 x: -720,
                 y: 110,
-                opacity: 1,
-                scale: 4.5,
+                scale: 1.5,
                 delay: -2,
             })
             .to(".console-x", 2, {
                 x: 700,
                 y: -110,
-                scale: 1.8,
+                scale: 0.3,
                 delay: -2,
             })
-            .to(".series-x", 0.3, {
+            .to(".x-text", 0.3, {
                 opacity: 0,
                 delay: -1,
             })
-            .to(".series-s", 0.5, {
-                y: -40,
-                opacity: 1,
+            .to(".s-text", 0.5, {
                 delay: -1,
+                opacity: 1,
             })
             .to(".price-x", 0.3, {
                 opacity: 0,
                 delay: -1,
             })
             .to(".price-s", 0.5, {
-                y: -29,
                 opacity: 1,
-                delay: -1,
-            })
-            .to(".series-x-text", 1, {
-                opacity: 1,
-                delay: -1,
-            })
-            .to(".series-s-text", 0.5, {
-                opacity: 0,
                 delay: -1,
             });
     });
 
     $(".series-x-grp").on("click", function () {
         var tl = gsap.timeline();
-        tl.to(".tri-dark", 1, {
+        tl.to(".tri-gray", 1, {
             rotation: "-45deg",
             opacity: 0,
         })
@@ -256,17 +244,16 @@ $(document).ready(function () {
             })
             .to(".console-x", 2, {
                 opacity: 1,
-                scale: 6,
+                scale: 0.7,
                 x: 10,
                 y: 0,
                 delay: -2,
             })
-            .to(".series-x", 0.3, {
+            .to(".x-text", 0.3, {
                 opacity: 0,
                 delay: -1,
             })
-            .to(".series-s", 0.5, {
-                y: -40,
+            .to(".s-text", 0.5, {
                 opacity: 1,
                 delay: -1,
             })
@@ -276,14 +263,6 @@ $(document).ready(function () {
             })
             .to(".price-s", 0.5, {
                 y: -29,
-                opacity: 1,
-                delay: -1,
-            })
-            .to(".series-x-text", 0.5, {
-                opacity: 0,
-                delay: -1,
-            })
-            .to(".series-s-text", 1, {
                 opacity: 1,
                 delay: -1,
             });

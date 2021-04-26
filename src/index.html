@@ -12,94 +12,112 @@
         <title>XBox</title>
     </head>
     <body>
+        <div class="container">
+            <header class="header my-2">
+                <a href="index.html" class="logo mb-3"
+                    ><img src="images/logo.png" alt="XBox Logo"
+                /></a>
+
+                <div class="header-icon search">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="header-icon menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </header>
+        </div>
+        <!-- end of Header -->
+
         <main class="main">
-            <div class="container wrapper">
-                <header class="header my-2">
-                    <a href="index.html" class="logo mb-3"
-                        ><img src="images/logo.png" alt="XBox Logo"
-                    /></a>
+            <div class="container wrapper py-5">
+                <div class="content">
+                    <h1 class="title h1-title">XBox Series X|S</h1>
 
-                    <div class="header-icon search">
-                        <i class="fas fa-search"></i>
+                    <span class="subtitle x-text">Series X</span>
+                    <span class="subtitle s-text">Series S</span>
+
+                    <div class="">
+                        <ul class="lists py-2">
+                            <li class="list-item">
+                                <span class="small-text">True </span
+                                ><span class="orange big-text">4k</span>
+                                <br />
+                                Gaming
+                            </li>
+                            <li class="list-item">
+                                <span class="small-text">Up to </span
+                                ><span class="blue big-text">120</span>
+                                <br />
+                                frames per second
+                            </li>
+                            <li class="list-item">
+                                <span class="yellow big-text">8k</span>
+                                <span class="small-text">HDR</span>
+                                <br />
+                                High dynamic range
+                            </li>
+                        </ul>
+
+                        <p class="price price-x py-2">$499</p>
+                        <p class="price price-s py-2">$299</p>
+
+                        <button class="btn-primary my-2">Add to cart</button>
                     </div>
-
-                    <div class="header-icon menu">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </header>
-
-                <div class="letters">
-                    <p class="letter a">A</p>
-                    <p class="letter b">B</p>
-                    <p class="letter x">X</p>
                 </div>
 
                 <div class="triangle">
-                    <div class="tri tri-green"></div>
-                    <div class="tri tri-dark"></div>
+                    <svg
+                        class="tri tri-green"
+                        viewBox="0 0 1000 996"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M999.058 995.595L0.81914 725.035L727.756 0.0864565L999.058 995.595Z"
+                            fill="url(#linear-g)"
+                        />
+                        <defs>
+                            <linearGradient
+                                id="linear-g"
+                                x1="999.058"
+                                y1="995.595"
+                                x2="359.428"
+                                y2="372.957"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stop-color="var(--color-start)" />
+                                <stop
+                                    offset="1"
+                                    stop-color="var(--color-stop)"
+                                />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
 
-                <div class="flex-group">
-                    <div class="content">
-                        <span class="subtitle">XBox Series X|S</span>
+                <span class="letter a">A</span>
+                <span class="letter b">B</span>
+                <span class="letter x">X</span>
 
-                        <h1 class="h1 title h1-title series-x">Series X</h1>
-                        <h1 class="h1 title h1-title series-s">Series S</h1>
+                <button class="series-grp series-s-grp">
+                    <img
+                        src="images/series-s.png"
+                        alt="Xbox Series S"
+                        class="console console-s"
+                    />
+                </button>
 
-                        <div class="desc-group">
-                            <ul class="lists">
-                                <li class="list-item">
-                                    True <span class="orange big-text">4k</span>
-                                    <br />
-                                    <span class="small-text">Gaming</span>
-                                </li>
-                                <li class="list-item">
-                                    Up to <span class="blue big-text">120</span>
-                                    <br />
-                                    <span class="small-text"
-                                        >frames per second</span
-                                    >
-                                </li>
-                                <li class="list-item">
-                                    <span class="yellow big-text">8k</span> HDR
-                                    <br />
-                                    <span class="small-text"
-                                        >High dynamic range</span
-                                    >
-                                </li>
-                            </ul>
-
-                            <p class="price price-x my-4">$499</p>
-                            <p class="price price-s my-4">$299</p>
-
-                            <button class="btn-primary">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <a href="#" class="series-grp series-s-grp">
-                        <img
-                            src="images/series-s.png"
-                            alt="Xbox Series S"
-                            class="console console-s"
-                        />
-                        <p class="series-text series-s-text">
-                            Series S <i class="fa fa-chevron-right"></i>
-                        </p>
-                    </a>
-
-                    <a href="#" class="series-grp series-x-grp">
-                        <img
-                            src="images/series-x.png"
-                            alt="Xbox Series X"
-                            class="console console-x"
-                        />
-                        <p class="series-text series-x-text">
-                            Series X <i class="fa fa-chevron-right"></i>
-                        </p>
-                    </a>
-                </div>
+                <button class="series-grp series-x-grp">
+                    <img
+                        src="images/series-x.png"
+                        alt="Xbox Series X"
+                        class="console console-x"
+                    />
+                </button>
             </div>
         </main>
+
+        <!-- Scripts -->
         <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
