@@ -73,7 +73,7 @@ a {
 }
 
 .lists {
-    @include flex;
+    display: flex;
     & > * {
         padding-right: 15px;
     }
@@ -153,7 +153,7 @@ a {
 .x {
     position: absolute;
     background-color: $blue;
-    bottom: -90px;
+    bottom: 0px;
     left: 750px;
     transform: rotate(-50deg);
 }
@@ -167,9 +167,9 @@ a {
 
 .console-x {
     position: absolute;
-    top: 130px;
+    top: 30px;
     left: 250px;
-    transform: scale(0.7);
+    transform: scale(0.6);
 }
 
 //Triangle
@@ -180,9 +180,9 @@ a {
     width: clamp(300px, calc(100vw / 1.25), 900px);
     height: auto;
     position: absolute;
-    top: -10%;
-    left: 25%;
-    transform: scale(0.9);
+    top: -15%;
+    left: 20%;
+    transform: scale(0.8);
 
     // Using CSS Variables to define gradient colors
     .tri-green {
