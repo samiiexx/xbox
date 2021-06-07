@@ -5,38 +5,14 @@
 // hamburgerMenu.addEventListener("click", function () {
 //     header.classList.toggle("menu-open");
 // });
-
-function openConsole(evt, consoleName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(consoleName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
-
 var tl = gsap.timeline();
-$(".series-s-btn").on("click", function () {
+$(".btn-s").on("click", function () {
     tl.add("start")
         .to(
             ".console-s",
             {
-                x: -710,
-                scale: 1.5,
+                x: -510,
+                scale: 1.25,
             },
             "start"
         )
@@ -52,7 +28,41 @@ $(".series-s-btn").on("click", function () {
         .to(
             ".tri",
             {
-                rotate: 45,
+                rotate: 35,
+            },
+            "start"
+        )
+        .to(
+            ".subtitle-x",
+            0.3,
+            {
+                opacity: 0,
+                delay: -1,
+            },
+            "start"
+        )
+        .to(
+            ".subtitle-s",
+            0.5,
+            {
+                delay: -1,
+                opacity: 1,
+            },
+            "start"
+        )
+        .to(
+            ".price-x",
+            0.3,
+            {
+                opacity: 0,
+            },
+            "start"
+        )
+        .to(
+            ".price-s",
+            0.5,
+            {
+                opacity: 1,
             },
             "start"
         );
