@@ -60,15 +60,15 @@ a {
 }
 
 .subtitle {
-    font-size: 5rem;
+    font-size: 4rem;
     color: $primary;
     text-transform: uppercase;
     font-weight: $font-bold;
 }
 
-.s-text {
+.subtitle-s {
     position: absolute;
-    top: 110px;
+    top: 130px;
     opacity: 0;
 }
 
@@ -90,7 +90,6 @@ a {
 }
 
 .small-text {
-    font-size: 1.5rem;
     font-weight: $font-bold;
 }
 
@@ -108,7 +107,7 @@ a {
 
 .price {
     font-weight: $font-bold;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .price-x {
@@ -130,30 +129,27 @@ a {
     padding: 0.1rem;
     width: 25px;
     height: 25px;
-    @include media-max("md") {
-        display: none;
-    }
 }
 
 .a {
     position: absolute;
     background-color: $orange;
     top: 150px;
-    right: 250px;
+    right: 200px;
 }
 
 .b {
     position: absolute;
     background-color: $yellow;
     top: 100px;
-    left: 700px;
+    left: 600px;
     transform: rotate(-40deg);
 }
 
 .x {
     position: absolute;
     background-color: $blue;
-    bottom: 0px;
+    top: 700px;
     left: 750px;
     transform: rotate(-50deg);
 }
@@ -182,7 +178,7 @@ a {
     position: absolute;
     top: -15%;
     left: 20%;
-    transform: scale(0.8);
+    transform: scale(0.7);
 
     // Using CSS Variables to define gradient colors
     .tri-green {
@@ -196,3 +192,9 @@ a {
     }
 }
 /*=====  End of Main Styles  ======*/
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
