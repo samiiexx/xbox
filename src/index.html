@@ -31,69 +31,52 @@
 
         <main class="main">
             <div class="container wrapper py-5">
-                <div class="tabcontent content" id="consoleX">
+                <div class="content" id="console">
                     <h1 class="title h1-title">XBox Series X|S</h1>
 
-                    <span class="subtitle">Series X</span>
+                    <span class="subtitle subtitle-x">Series X</span>
+                    <span class="subtitle subtitle-s">Series S</span>
 
-                    <div class="">
-                        <ul class="lists py-2">
-                            <li class="list-item">
-                                <span class="small-text">True </span
-                                ><span class="orange big-text">4k</span>
-                                <br />
-                                Gaming
-                            </li>
-                            <li class="list-item">
-                                <span class="small-text">Up to </span
-                                ><span class="blue big-text">120</span>
-                                <br />
-                                frames per second
-                            </li>
-                            <li class="list-item">
-                                <span class="yellow big-text">8k</span>
-                                <span class="small-text">HDR</span>
-                                <br />
-                                High dynamic range
-                            </li>
-                        </ul>
+                    <div class="flex">
+                        <div class="">
+                            <ul class="lists py-2">
+                                <li class="list-item">
+                                    <span class="small-text">True </span
+                                    ><span class="orange big-text">4k</span>
+                                    <br />
+                                    Gaming
+                                </li>
+                                <li class="list-item">
+                                    <span class="small-text">Up to </span
+                                    ><span class="blue big-text">120</span>
+                                    <br />
+                                    frames per second
+                                </li>
+                                <li class="list-item">
+                                    <span class="yellow big-text">8k</span>
+                                    <span class="small-text">HDR</span>
+                                    <br />
+                                    High dynamic range
+                                </li>
+                            </ul>
 
-                        <p class="price py-2">$499</p>
+                            <p class="price price-x py-2">$499</p>
+                            <p class="price price-s">$299</p>
 
-                        <button class="btn-primary my-2">Add to cart</button>
-                    </div>
-                </div>
+                            <button class="btn-primary my-2">
+                                Add to cart
+                            </button>
+                        </div>
 
-                <div class="tabcontent content" id="consoleS">
-                    <h1 class="title h1-title">XBox Series X|S</h1>
-
-                    <span class="subtitle">Series S</span>
-
-                    <div class="">
-                        <ul class="lists py-2">
-                            <li class="list-item">
-                                <span class="small-text">True </span
-                                ><span class="orange big-text">4k</span>
-                                <br />
-                                Gaming
-                            </li>
-                            <li class="list-item">
-                                <span class="small-text">Up to </span
-                                ><span class="blue big-text">120</span>
-                                <br />
-                                frames per second
-                            </li>
-                            <li class="list-item">
-                                <span class="yellow big-text">8k</span>
-                                <span class="small-text">HDR</span>
-                                <br />
-                                High dynamic range
-                            </li>
-                        </ul>
-
-                        <p class="price py-2">$299</p>
-
-                        <button class="btn-primary my-2">Add to cart</button>
+                        <div class="console-images">
+                            <a href="#" class="btn-s">
+                                <img
+                                    src="images/series-s.png"
+                                    alt=""
+                                    class="console-s"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -126,7 +109,7 @@
                     </svg>
                 </div>
 
-                <div class="triangle">
+                <!-- <div class="triangle">
                     <svg
                         class="tri tri-green green-1"
                         viewBox="0 0 1000 996"
@@ -153,38 +136,11 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                </div>
+                </div> -->
 
                 <span class="letter a">A</span>
                 <span class="letter b">B</span>
                 <span class="letter x">X</span>
-
-                <div class="tab">
-                    <a
-                        class="tablinks series-btn series-s-btn"
-                        onclick="openConsole(event,'consoleS')"
-                        id="defaultOpen"
-                    >
-                        Series-S
-                        <img
-                            src="images/series-s.png"
-                            alt="Xbox Series S"
-                            class="console-s"
-                        />
-                    </a>
-
-                    <a
-                        class="tablinks series-btn"
-                        onclick="openConsole(event, 'consoleX')"
-                    >
-                        Series-X
-                        <img
-                            src="images/series-x.png"
-                            alt="Xbox Series X"
-                            class="console-x"
-                        />
-                    </a>
-                </div>
             </div>
         </main>
 
